@@ -1,0 +1,56 @@
+[
+  {
+    "id": "0x01",
+    "contents": [
+      {
+        "index": 0,
+        "content": "World War II is considered one of the deadliest wars in human history.",
+        "questionId": "q01"
+      },
+      {
+        "index": 1,
+        "content": "It resulted in a number of casualties.",
+        "questionId": "q01"
+      },
+      {
+        "index": 2,
+        "content": "After the war ended, myriads of colonies recovered their independence.",
+        "questionId": "q02"
+      }
+    ],
+    "questions": [
+      {
+        "id": "q01",
+        "content": "When did WWII end?",
+        "selections": [
+          {
+            "id": "0",
+            "content": "1945",
+            "isTrue": true
+          },
+          {
+            "id": "1",
+            "content": "1944",
+            "isTrue": false
+          }
+        ]
+      },
+      {
+        "id": "q02",
+        "content": "Which country recovered its independence?",
+        "selections": [
+          {
+            "id": "0",
+            "content": "Korea",
+            "isTrue": true
+          },
+          {
+            "id": "1",
+            "content": "Japan",
+            "isTrue": false
+          }
+        ]
+      }
+    ]
+  }
+]
