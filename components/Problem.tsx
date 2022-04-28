@@ -1,13 +1,18 @@
 import { ProblemData } from "@src/types/Types";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import Question from "./Question";
 
 type Props = {
+  index?: string;
   problem: ProblemData;
   onDecisionChange?: (questionId: string, choiceIndices: string[]) => void;
 };
 
-const Problem: FC<Props> = ({ problem, onDecisionChange = () => {} }) => {
+const Problem: FC<Props> = ({
+  index,
+  problem,
+  onDecisionChange = () => {},
+}) => {
   const { id, contents, questions } = problem;
 
   function render(): JSX.Element[] {
@@ -41,7 +46,29 @@ const Problem: FC<Props> = ({ problem, onDecisionChange = () => {} }) => {
     return renderedElements;
   }
 
-  return <div>{render()}</div>;
+  return (
+    <div>
+      {render()}
+      {/* {render().map((element, i) => {
+        if (i === 0 && element.type === ProblemContent)
+          return (
+            <div key={i} className="flex flex-row gap-x-4">
+              <span className="w-8">{index}.</span>
+              <span>{element}</span>
+            </div>
+          );
+
+        if (element.type === Question)
+          return (
+            <div key={i} className="flex flex-row gap-x-4">
+              <span className="w-8">{`${index}-${i}`}</span>
+              <span>{element}</span>
+            </div>
+          );
+        return <span className="ml-8">{element}</span>;
+      })} */}
+    </div>
+  );
 };
 
 type ContentProps = {

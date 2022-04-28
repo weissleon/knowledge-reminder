@@ -1,5 +1,6 @@
+import { useDidUpdate } from "@hooks/useDidUpdate";
 import type { QuestionData } from "@src/types/Types";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import ChoiceBox from "./ChoiceBox";
 
 type Props = {
