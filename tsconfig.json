@@ -15,7 +15,7 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": ".",
-    "paths": {"@components/*":["components/*"], "@src/types/*":["types/*"], "@data/*":["data/*"]}
+    "paths": {"@hooks/*":["hooks/*"],"@components/*":["components/*"], "@src/types/*":["types/*"], "@data/*":["data/*"]}
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

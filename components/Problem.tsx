@@ -4,14 +4,14 @@ import Question from "./Question";
 
 type Props = {
   problem: ProblemData;
+  onDecisionChange?: (questionId: string, choiceIndices: string[]) => void;
 };
 
-const Problem: FC<Props> = ({ problem }) => {
+const Problem: FC<Props> = ({ problem, onDecisionChange = () => {} }) => {
   const { id, contents, questions } = problem;
 
   function render(): JSX.Element[] {
     let renderedElements: JSX.Element[] = [];
-
     let currentIndex = 0;
     let currentQuestionIndex = 0;
 
@@ -20,7 +20,11 @@ const Problem: FC<Props> = ({ problem }) => {
       const question = questions[currentQuestionIndex] || null;
       if (content === null || content.questionId !== question.id) {
         renderedElements.push(
-          <Question key={question.id} question={question} />
+          <Question
+            key={question.id}
+            question={question}
+            onChoicesChange={onDecisionChange}
+          />
         );
         currentQuestionIndex++;
       } else {
