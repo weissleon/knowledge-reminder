@@ -13,14 +13,16 @@ export type ProblemContentData = {
 export type QuestionData = {
   id: string;
   content: string;
-  selections: ChoiceData[];
+  choices: ChoiceData[];
 };
 
-export type ChoiceData = {
-  id: string;
-  content: string;
-  isTrue: boolean;
-};
+// export type ChoiceData = {
+//   // id: string;
+//   content: string;
+//   // isTrue: boolean;
+// };
+
+export type ChoiceData = string
 
 export type DecisionData = {
   questionId: string;

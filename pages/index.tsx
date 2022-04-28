@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import Question from "@components/Question";
 import dummyProblems from "@data/dummy_data.json";
 import { useImmer } from "use-immer";
 import { ProblemData } from "@src/types/Types";
@@ -27,7 +26,6 @@ const Home: NextPage = () => {
   return (
     <div>
       <Problem key={problems[0].id} problem={problems[0]} />
-      {/* <Question key={problems[0].id} question={questions[0]} /> */}
     </div>
   );
 };
