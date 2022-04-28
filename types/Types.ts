@@ -22,9 +22,29 @@ export type QuestionData = {
 //   // isTrue: boolean;
 // };
 
-export type ChoiceData = string
+export type ChoiceData = string;
 
 export type DecisionData = {
   questionId: string;
   decision: string[];
+};
+
+export type TestData = {
+  id: string;
+  problems: {
+    index: number;
+    problemId: string;
+    questions: {
+      questionId: string;
+      choices: { index: number; choiceId: string }[];
+    }[];
+  }[];
+};
+
+export type TestResultData = {
+  testId: string;
+  decisions: {
+    questionId: string;
+    choiceIds: string[];
+  }[];
 };
