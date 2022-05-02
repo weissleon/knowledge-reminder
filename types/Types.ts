@@ -4,6 +4,12 @@ export type ProblemData = {
   questions: QuestionData[];
 };
 
+export type ProblemDBData = {
+  id: string;
+  contentIds: string[];
+  questionIds: string[];
+};
+
 export type ProblemContentData = {
   index: number;
   content: string;
@@ -39,6 +45,10 @@ export type TestData = {
       choices: { index: number; choiceId: string }[];
     }[];
   }[];
+};
+
+export type TestDBData = {
+  id: string;
 };
 
 export type TestResultData = {
